@@ -17,6 +17,7 @@ judul.innerHTML = "Alya Dhiya"
 
 
 // document.getElementsByTagName() -> mengembalikan HTML Collections
+// Harus dikasi index karena mengembalikan array
 const p = document.getElementsByTagName('p');
 
 // Kalau mau mengubah style semua elemen p
@@ -30,5 +31,27 @@ hSatu.style.fontSize = '50px';
 
 
 // document.getElementsByClassName() -> mengembalikan HTML Collections
-const pSatu = document.getElementsByClassName('p1');
-pSatu[0].innerHTML = 'Ini diubah dari JavaScript';
+const pDua = document.getElementsByClassName('p2');
+pDua[0].innerHTML = 'Ini diubah dari JavaScript';
+
+
+// document.querySelector() -> mengembalikan satu elemen yang pertama kali ditemukan
+const p4 = document.querySelector('#b p');
+p4.style.color = 'green';
+p4.style.fontSize = '30px';
+// Outputnya sama dengan CSS berikut:
+// #b p { color: green; }
+
+const li2 = document.querySelector('section#b ul li:nth-child(2)');
+li2.style.backgroundColor = 'orange';
+// Outputnya sama dengan CSS berikut:
+// li:nth-child(2) { background-color: orange; }
+// lebih spesifik -> section#b ul li:nth-child(2) { background-color: orange; }
+
+const pQ = document.querySelector('p');
+pQ.innerHTML = 'Ini diubah melalui JavaScript';
+// Outputnya hanya akan mengubah elemen p yang pertama atau p1 dalam case ini
+
+// document.querySelectorAll() = getElementsByTagName()
+const pTiga = document.querySelectorAll('p');
+p[2].style.fontFamily = 'Times New Roman';
