@@ -30,3 +30,9 @@ p4.addEventListener('click', function() {
     // simpan
     ul.appendChild(liBaru);
 });
+
+// PERBEDAAN EVENT HANDLER DAN EVENT LISTENER
+// Event Handler: perubahaan terakhir dilakukan akan menimpa perubahan sebelumnya
+// Event Listener: akan menambah perubahannya
+
+// PERSAMAAN: apa yg dpt dilakukan event handler dpt jg dilakukan oleh event listener
