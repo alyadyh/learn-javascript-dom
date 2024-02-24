@@ -52,3 +52,22 @@ sliderBiru.addEventListener('input', function() {
     const bir = sliderBiru.value;
     document.body.style.backgroundColor = 'rgb('+ mer +', '+ ijo +', '+ bir +')';
 });
+
+
+
+document.body.addEventListener('mousemove', function(event) {
+    // posisi mouse
+    // console.log(event.clientX); //mengembalikan nilai x posisi mouse
+    // console.log(event.clientY); //mengembalikan nilai y posisi mouse
+
+    // ukuran browser
+    // console.log(window.innerWidth);
+
+
+    const xPos = (event.clientX / window.innerWidth) * 255;
+    const yPos = (event.clientY / window.innerWidth) * 255;
+    console.log(xPos);
+    console.log(yPos);
+
+    document.body.style.color = 'rgb('+ xPos +', '+ yPos +', 100)';
+});
