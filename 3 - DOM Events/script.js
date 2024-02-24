@@ -11,3 +11,22 @@ function ubahWarnaP2() {
 }
 const p2 = document.querySelector('.p2');
 p2.onclick = ubahWarnaP2;
+
+// ***
+
+// addEventListener
+const p4 = document.querySelector('section#b p');
+p4.addEventListener('click', function() {
+    // ambil parent
+    const ul = document.querySelector('section#b ul');
+
+    // buat elemen baru
+    const liBaru = document.createElement('li');
+    const teksLiBaru = document.createTextNode('item baru');
+
+    // rangkai
+    liBaru.appendChild(teksLiBaru);
+
+    // simpan
+    ul.appendChild(liBaru);
+});
