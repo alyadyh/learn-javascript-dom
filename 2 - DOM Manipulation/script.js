@@ -71,3 +71,24 @@ const li2 = document.querySelector('section#b ul li:nth-child(2');
 
 // - simpan elemen
 ul.insertBefore(liBaru, li2);
+
+// ***
+
+// parentNode.removeChild()
+const link = document.getElementsByTagName('a')[0];
+sectionA.removeChild(link);
+
+// parentNode.replaceChild()
+const sectionB = document.getElementById('b');
+const p4 = sectionB.querySelector('p');
+
+const h2Baru = document.createElement('h2');
+const teksH2baru = document.createTextNode('Judul Baru');
+
+h2Baru.appendChild(teksH2baru);
+
+
+
+pBaru.style.backgroundColor = 'lightgreen';
+liBaru.style.backgroundColor = 'lightgreen';
+h2Baru.style.backgroundColor = 'lightgreen';
