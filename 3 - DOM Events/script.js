@@ -36,3 +36,20 @@ p4.addEventListener('click', function() {
 // Event Listener: akan menambah perubahannya
 
 // PERSAMAAN: apa yg dpt dilakukan event handler dpt jg dilakukan oleh event listener
+
+
+// Event Handler hanya akan menjalankan color: red dan menimpa perubahan sebelumnya
+p3.onclick = function() {
+    p3.style.backgroundColor = 'lightpink';
+}
+p3.onclick = function() {
+    p3.style.color = 'red';
+}
+
+// Event Listener akan menjalankan kedua perubahan di bawah ini
+p2.addEventListener('mouseenter', function() {
+    p2.style.backgroundColor = 'lightblue';
+});
+p2.addEventListener('mouseleave', function() {
+    p2.style.color = 'red';
+});
