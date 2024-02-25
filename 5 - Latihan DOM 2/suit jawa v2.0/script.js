@@ -65,6 +65,22 @@ function getHasil(comp, player) {
 //     info.innerHTML = hasil;
 // });
 
+function putar() {
+    const imgComputer = document.querySelector('.img-komputer');
+    const gambar = ['gajah', 'semut', 'manusia'];
+    let i = 0;
+    const waktuMulai = new Date().getTime();
+
+    setInterval(function() {
+        if ( new Date().getTime() - waktuMulai > 1000 ) {
+            clearInterval;
+            return;
+        }
+        imgComputer.setAttribute('src', 'img/' + gambar[i++] + '.png');
+        // untuk loop ketika gambar sdh habis akan otomatis balik lagi
+        if( i == gambar.length ) i = 0;
+    }, 100);
+}
 
 
 // Cara lebih efisien
@@ -81,10 +97,15 @@ pilihan.forEach(function(pil) {
         console.log('player : ' + pilihanPlayer);
         console.log('result : ' + hasil);
         
-        const imgComp = document.querySelector('.img-komputer');
-        imgComp.setAttribute('src', 'img/' + pilihanComp + '.png');
+        putar();
         
-        const info = document.querySelector('.info');
-        info.innerHTML = hasil;
+        setTimeout(function() {
+            const imgComp = document.querySelector('.img-komputer');
+            imgComp.setAttribute('src', 'img/' + pilihanComp + '.png');
+            
+            const info = document.querySelector('.info');
+            info.innerHTML = hasil;
+        }, 1000);
+
     });
 });
